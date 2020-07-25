@@ -208,7 +208,7 @@ public class UI extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(25, 33, 36));
-        jLabel4.setText("Versión: 1.0");
+        jLabel4.setText("Versión: 1.3");
 
         javax.swing.GroupLayout jPanelIzquierdoLayout = new javax.swing.GroupLayout(jPanelIzquierdo);
         jPanelIzquierdo.setLayout(jPanelIzquierdoLayout);
@@ -228,12 +228,12 @@ public class UI extends javax.swing.JFrame {
                 .addComponent(jPanelMainHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanelMainHelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 613, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 563, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanelIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 260, 790));
+        getContentPane().add(jPanelIzquierdo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 260, 740));
 
         jDesktopPaneMain.setBackground(new java.awt.Color(245, 245, 246));
 
@@ -245,10 +245,10 @@ public class UI extends javax.swing.JFrame {
         );
         jDesktopPaneMainLayout.setVerticalGroup(
             jDesktopPaneMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jDesktopPaneMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 72, 730, 750));
+        getContentPane().add(jDesktopPaneMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 72, 730, 700));
 
         jPanel1.setBackground(new java.awt.Color(75, 99, 110));
 

@@ -11,7 +11,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,6 +30,24 @@ public abstract class Sunat implements ConstantesRucgle {
     
     //atributos para el constructor
     private String nruc;
+    
+    //atributos getters
+    private String successResult;
+    private String ruc;
+    private String razonSocial;
+    private String tipoDePersona;
+    private String condicion;
+    private String nombreComercial;
+    private String tipo;
+    private String inscripcion;
+    private String estado;
+    private String direccion;
+    private String sistemaEmision;
+    private String actividadExterior;
+    private String sistemContabilidad;
+    private String emisionElectronica;
+    private String ple;
+    private String apiMsg;  
 
     //constructor
     public Sunat(String nruc) {
@@ -38,13 +55,76 @@ public abstract class Sunat implements ConstantesRucgle {
     }
 
     //getters y setters
-    public String getNruc() {
-        return nruc;
-    }
-
     public void setNruc(String nruc) {
         this.nruc = nruc;  
     }
+    
+    public String getSuccessResult() {
+        return successResult;
+    }
+
+    public String getRuc() {
+        return ruc;
+    }
+
+    public String getRazonSocial() {
+        return razonSocial;
+    }
+
+    public String getTipoDePersona() {
+        return tipoDePersona;
+    }
+
+    public String getCondicion() {
+        return condicion;
+    }
+
+    public String getNombreComercial() {
+        return nombreComercial;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getInscripcion() {
+        return inscripcion;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getSistemaEmision() {
+        return sistemaEmision;
+    }
+
+    public String getActividadExterior() {
+        return actividadExterior;
+    }
+
+    public String getSistemContabilidad() {
+        return sistemContabilidad;
+    }
+
+    public String getEmisionElectronica() {
+        return emisionElectronica;
+    }
+
+    public String getPle() {
+        return ple;
+    }
+
+    public String getApiMsg() {
+        return apiMsg;
+    }
+
+    //clase abstracta que deberá ser implementada
+    public abstract Map<Integer, Map<String, String>> getRepLegales();
     
     //este metodo se conecta a la API, obtiene el JSON y lo pasa a String
     protected String getApiContent(){
@@ -58,10 +138,10 @@ public abstract class Sunat implements ConstantesRucgle {
             conexion.setConnectTimeout(CONNECT_TIMEOUT);
             conexion.setReadTimeout(READ_TIMEOUT); 
             
-            int estado = conexion.getResponseCode();
+            int status = conexion.getResponseCode();
             
             //verifica que el estado de conexión sea exitoso - 200
-            if (estado > 299) {              
+            if (status > 299) {              
                 lector = new BufferedReader(new InputStreamReader(conexion.getErrorStream()));
                 while((linea = lector.readLine()) != null){
                     respContenido.append(linea);
@@ -88,8 +168,4 @@ public abstract class Sunat implements ConstantesRucgle {
         }
         return null;
     }
-    
-    //clase abstracta que será implementada
-    public abstract List<Map<Integer, Map<String, String>>> parse();
-    
 }

@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/rucgle/SunatNatural.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>49</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Kokox/Documents/NetBeansProjects/Rucgle/src/user_interface/UI.java</file>
+            <file>file:/C:/Users/Kokox/Documents/NetBeansProjects/Rucgle/src/rucgle/Sunat.java</file>
+            <file>file:/C:/Users/Kokox/Documents/NetBeansProjects/Rucgle/src/rucgle/SunatNatural.java</file>
+            <file>file:/C:/Users/Kokox/Documents/NetBeansProjects/Rucgle/src/user_interface/UI_Home.java</file>
+            <file>file:/C:/Users/Kokox/Documents/NetBeansProjects/Rucgle/src/rucgle/SunatJuridica.java</file>
+        </group>
     </open-files>
 </project-private>

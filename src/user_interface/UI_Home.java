@@ -9,8 +9,6 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
-import java.util.List;
-import javafx.beans.binding.BooleanBinding;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JButton;
@@ -35,7 +33,7 @@ public class UI_Home extends javax.swing.JInternalFrame {
     Sunat oSuNatural;
     private SwingWorker<Void, Integer> buscarRucWorker = null;
     
-    
+    //constructor
     public UI_Home() {
         //Inicializa componentes del formulario
         initComponents();
@@ -131,10 +129,10 @@ public class UI_Home extends javax.swing.JInternalFrame {
         btnLiampiarTodo = new javax.swing.JButton();
         lblLoadingText = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(730, 750));
+        setPreferredSize(new java.awt.Dimension(730, 700));
 
         jPanel1.setBackground(new java.awt.Color(214, 217, 223));
-        jPanel1.setPreferredSize(new java.awt.Dimension(730, 730));
+        jPanel1.setPreferredSize(new java.awt.Dimension(730, 953));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(25, 33, 36));
@@ -349,7 +347,7 @@ public class UI_Home extends javax.swing.JInternalFrame {
         });
 
         lblLoadingText.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        lblLoadingText.setForeground(new java.awt.Color(25, 33, 36));
+        lblLoadingText.setForeground(new java.awt.Color(0, 51, 51));
         lblLoadingText.setText("Cargando información de SUNAT...");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -358,45 +356,33 @@ public class UI_Home extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtInscripcionOp))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblLoadingAnimation)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblLoadingText)
-                                .addGap(37, 37, 37))
-                            .addComponent(txtPLEOp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmiElectOp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtEstadoOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtInscripcionOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtTipoOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(txtTipoOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtEstadoOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtRazonSocialOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtRazonSocialOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(txtRucInput, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -406,7 +392,12 @@ public class UI_Home extends javax.swing.JInternalFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(txtRucOp, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnRucCp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(btnRucCp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblLoadingAnimation))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(41, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel11)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -434,8 +425,14 @@ public class UI_Home extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel14)
                                     .addComponent(jLabel15))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtActExteriorOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtSistContabOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtActExteriorOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEmiElectOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtSistContabOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(406, 406, 406))
+                            .addComponent(txtPLEOp, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCondicionCp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -452,23 +449,33 @@ public class UI_Home extends javax.swing.JInternalFrame {
                     .addComponent(btnTipoPersonaCp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(btnRazonSocialCp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(41, 41, 41))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblLoadingText)
+                .addGap(159, 159, 159))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel16)
-                    .addComponent(txtRucInput, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscarRuc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLiampiarTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRucCp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtRucOp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2)))
-                .addGap(15, 15, 15)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel16)
+                            .addComponent(txtRucInput, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBuscarRuc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLiampiarTodo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRucCp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtRucOp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2)))
+                        .addGap(15, 15, 15))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblLoadingAnimation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -533,43 +540,34 @@ public class UI_Home extends javax.swing.JInternalFrame {
                         .addComponent(jLabel13)
                         .addComponent(txtSistContabOp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnSistContabCp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnEmiElectCp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtEmiElectOp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnEmiElectCp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel14))
+                        .addComponent(jLabel14)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel15)
                         .addComponent(txtPLEOp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnPLECp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(50, 50, 50))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblLoadingAnimation))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(lblLoadingText)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
+                .addComponent(lblLoadingText)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 728, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
         );
 
         pack();
@@ -606,42 +604,36 @@ public class UI_Home extends javax.swing.JInternalFrame {
                 if (txtRucInput.getText().startsWith("20")){
                     //Instanciamos con la clase SunatJuridica
                     oSuJuridica = new SunatJuridica(txtRucInput.getText());
-
+       
                     //Verifica que la respuesta de la API sea "true"
-                    if ("true".equals(oSuJuridica.parse().get(0).get(0).get("successResult"))){              
-                        //seteamos las variables con la información obtenida de la clase
-                        String apRuc = oSuJuridica.parse().get(0).get(0).get("ruc");
-                        String apRazonSocial = oSuJuridica.parse().get(0).get(0).get("razonSocial");
-                        String apTipoDePersona = oSuJuridica.parse().get(0).get(0).get("tipoDePersona");
-                        String apCondicion = oSuJuridica.parse().get(0).get(0).get("condicion");
-                        String apNombreComercial = oSuJuridica.parse().get(0).get(0).get("nombreComercial");
-                        String apTipo = oSuJuridica.parse().get(0).get(0).get("tipo");
-                        String apInscripcion = oSuJuridica.parse().get(0).get(0).get("inscripcion");
-                        String apEstado = oSuJuridica.parse().get(0).get(0).get("estado");
-                        String apDireccion = oSuJuridica.parse().get(0).get(0).get("direccion");
-                        String apSistemEmision = oSuJuridica.parse().get(0).get(0).get("sistemaEmision");
-                        String apActividadExterior = oSuJuridica.parse().get(0).get(0).get("actividadExterior");
-                        String apSistemaContabilidad = oSuJuridica.parse().get(0).get(0).get("sistemaContabilidad");
-                        String apEmisionElectronica = oSuJuridica.parse().get(0).get(0).get("emisionElectronica");
-                        String apPLE = oSuJuridica.parse().get(0).get(0).get("ple");
-
-                        procesador(apRuc, txtRucOp, btnRucCp);
-                        procesador(apRazonSocial, txtRazonSocialOp, btnRazonSocialCp);
-                        procesador(apTipoDePersona, txtTipoPersonaOp, btnTipoPersonaCp);
-                        procesador(apCondicion, txtCondicionOp, btnCondicionCp);
-                        procesador(apNombreComercial, txtNombreComOp, btnNombreComCp);
-                        procesador(apTipo, txtTipoOp, btnTipoCp);
-                        procesador(apInscripcion, txtInscripcionOp, btnInscripcionCp);
-                        procesador(apEstado, txtEstadoOp, btnEstadoCp);
-                        procesador(apDireccion, txtDireccionOp, btnDireccionCp);
-                        procesador(apSistemEmision, txtSistEmisionOp, btnSistEmisionCp);
-                        procesador(apActividadExterior, txtActExteriorOp, btnActExteriorCp);
-                        procesador(apSistemaContabilidad, txtSistContabOp, btnSistContabCp);
-                        procesador(apEmisionElectronica, txtEmiElectOp, btnEmiElectCp);
-                        procesador(apPLE, txtPLEOp, btnPLECp);
+                    if ("true".equals(oSuJuridica.getSuccessResult())){   
+                        
+                        //Futura implementación
+                        /*
+                        for(int i = 0; i < oSuJuridica.getRepLegales().size(); i++){
+                            //System.out.println(oSuJuridica.getRepLegales().get(i).get("numdoc"));
+                        }
+                        */
+                        
+                        //se establecen los valores en el formulario                       
+                        procesador(oSuJuridica.getRuc(), txtRucOp, btnRucCp);
+                        procesador(oSuJuridica.getRazonSocial(), txtRazonSocialOp, btnRazonSocialCp);
+                        procesador(oSuJuridica.getTipoDePersona(), txtTipoPersonaOp, btnTipoPersonaCp);
+                        procesador(oSuJuridica.getCondicion(), txtCondicionOp, btnCondicionCp);
+                        procesador(oSuJuridica.getNombreComercial(), txtNombreComOp, btnNombreComCp);
+                        procesador(oSuJuridica.getTipo(), txtTipoOp, btnTipoCp);
+                        procesador(oSuJuridica.getInscripcion(), txtInscripcionOp, btnInscripcionCp);
+                        procesador(oSuJuridica.getEstado(), txtEstadoOp, btnEstadoCp);
+                        procesador(oSuJuridica.getDireccion(), txtDireccionOp, btnDireccionCp);
+                        procesador(oSuJuridica.getSistemaEmision(), txtSistEmisionOp, btnSistEmisionCp);
+                        procesador(oSuJuridica.getActividadExterior(), txtActExteriorOp, btnActExteriorCp);
+                        procesador(oSuJuridica.getSistemContabilidad(), txtSistContabOp, btnSistContabCp);
+                        procesador(oSuJuridica.getEmisionElectronica(), txtEmiElectOp, btnEmiElectCp);
+                        procesador(oSuJuridica.getPle(), txtPLEOp, btnPLECp);
+                        
                     } else {
-                        String apiSucc = oSuJuridica.parse().get(0).get(0).get("successResult");
-                        JOptionPane.showMessageDialog(null, "["+oSuJuridica.parse().get(0).get(0).get("apiMsg")+"]", "API Response: " + apiSucc, JOptionPane.INFORMATION_MESSAGE);
+                        String apiSucc = oSuJuridica.getSuccessResult();
+                        JOptionPane.showMessageDialog(null, "["+oSuJuridica.getApiMsg()+"]", "API Response: " + apiSucc, JOptionPane.INFORMATION_MESSAGE);
                     }   
                 //Caso contrario aplicará la clase "SunatNatural"
                 }else {
@@ -649,38 +641,24 @@ public class UI_Home extends javax.swing.JInternalFrame {
                     oSuNatural = new SunatNatural(txtRucInput.getText());
 
                     //Verifica que la respuesta de la API sea "true"
-                    if ("true".equals(oSuNatural.parse().get(0).get(0).get("successResult"))){               
-                        //seteamos las variables con la información obtenida de la clase
-                        String apRuc = oSuNatural.parse().get(0).get(0).get("ruc");
-                        String apRazonSocial = oSuNatural.parse().get(0).get(0).get("razonSocial");
-                        String apTipoDePersona = oSuNatural.parse().get(0).get(0).get("tipoDePersona");
-                        String apCondicion = oSuNatural.parse().get(0).get(0).get("condicion");
-                        String apNombreComercial = oSuNatural.parse().get(0).get(0).get("nombreComercial");
-                        String apTipo = oSuNatural.parse().get(0).get(0).get("tipo");
-                        String apInscripcion = oSuNatural.parse().get(0).get(0).get("inscripcion");
-                        String apEstado = oSuNatural.parse().get(0).get(0).get("estado");
-                        String apDireccion = oSuNatural.parse().get(0).get(0).get("direccion");
-                        String apSistemEmision = oSuNatural.parse().get(0).get(0).get("sistemaEmision");
-                        String apActividadExterior = oSuNatural.parse().get(0).get(0).get("actividadExterior");
-                        String apSistemaContabilidad = oSuNatural.parse().get(0).get(0).get("sistemaContabilidad");
-                        String apEmisionElectronica = oSuNatural.parse().get(0).get(0).get("emisionElectronica");
-
-                        procesador(apRuc, txtRucOp, btnRucCp);
-                        procesador(apRazonSocial, txtRazonSocialOp, btnRazonSocialCp);
-                        procesador(apTipoDePersona, txtTipoPersonaOp, btnTipoPersonaCp);
-                        procesador(apCondicion, txtCondicionOp, btnCondicionCp);
-                        procesador(apNombreComercial, txtNombreComOp, btnNombreComCp);
-                        procesador(apTipo, txtTipoOp, btnTipoCp);
-                        procesador(apInscripcion, txtInscripcionOp, btnInscripcionCp);
-                        procesador(apEstado, txtEstadoOp, btnEstadoCp);
-                        procesador(apDireccion, txtDireccionOp, btnDireccionCp);
-                        procesador(apSistemEmision, txtSistEmisionOp, btnSistEmisionCp);
-                        procesador(apActividadExterior, txtActExteriorOp, btnActExteriorCp);
-                        procesador(apSistemaContabilidad, txtSistContabOp, btnSistContabCp);
-                        procesador(apEmisionElectronica, txtEmiElectOp, btnEmiElectCp);
+                    if ("true".equals(oSuNatural.getSuccessResult())){                        
+                        //se establecen los valores en el formulario
+                        procesador(oSuNatural.getRuc(), txtRucOp, btnRucCp);
+                        procesador(oSuNatural.getRazonSocial(), txtRazonSocialOp, btnRazonSocialCp);
+                        procesador(oSuNatural.getTipoDePersona(), txtTipoPersonaOp, btnTipoPersonaCp);
+                        procesador(oSuNatural.getCondicion(), txtCondicionOp, btnCondicionCp);
+                        procesador(oSuNatural.getNombreComercial(), txtNombreComOp, btnNombreComCp);
+                        procesador(oSuNatural.getTipo(), txtTipoOp, btnTipoCp);
+                        procesador(oSuNatural.getInscripcion(), txtInscripcionOp, btnInscripcionCp);
+                        procesador(oSuNatural.getEstado(), txtEstadoOp, btnEstadoCp);
+                        procesador(oSuNatural.getDireccion(), txtDireccionOp, btnDireccionCp);
+                        procesador(oSuNatural.getSistemaEmision(), txtSistEmisionOp, btnSistEmisionCp);
+                        procesador(oSuNatural.getActividadExterior(), txtActExteriorOp, btnActExteriorCp);
+                        procesador(oSuNatural.getSistemContabilidad(), txtSistContabOp, btnSistContabCp);
+                        procesador(oSuNatural.getEmisionElectronica(), txtEmiElectOp, btnEmiElectCp);  
                     } else {
-                        String apiSucc = oSuNatural.parse().get(0).get(0).get("successResult");
-                        JOptionPane.showMessageDialog(null, "["+oSuNatural.parse().get(0).get(0).get("apiMsg")+"]", "API Response: " + apiSucc, JOptionPane.INFORMATION_MESSAGE);
+                        String apiSucc = oSuNatural.getSuccessResult();
+                        JOptionPane.showMessageDialog(null, "["+oSuNatural.getApiMsg()+"]", "API Response: " + apiSucc, JOptionPane.INFORMATION_MESSAGE);
                     }                
                 }
                 return null;
